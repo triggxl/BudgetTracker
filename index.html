@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <title>Document</title>
+</head>
+<body>
+  <main-container class="main-container">
+    <h2>BUDGET APP</h2>
+    <wrapper class="wrapper">
+      <div class="budget-entry">
+        <p>Please Enter Your Budget</p>
+          <label for="budget-entry"></label>
+          <input type="text" id="budget-amount">
+          <button class="btn" id="calc-budget" onclick="calculateBudget()">Calculate</button>
+      </div>
+      <div class="expense-entry">
+        <p>Please Enter Your Expense Name</p>
+          <label for="expense-entry"></label>
+          <input type="text" id="expense-name">
+        <p>Please Enter Your Amount</p>
+          <label for="expense-entry"></label>
+          <input type="text" id="expense-amount" placeholder="">
+          <button class="btn" id="calc-expenses" onclick="updateExpenses()">Add Expense</button>
+      </div>
+      <!-- relative to budget-entry div -->
+      <div class="row">
+        <p>BUDGET</p>
+        <i class="far fa-money-bill-alt"></i>
+          <p id="budget"></p>
+      </div>
+
+      <div class="row">
+        <p>EXPENSES</p>
+        <i class="far fa-credit-card"></i>
+          <p id="expenses"></p>
+      </div>
+
+      <div class="row" >
+        <p>BALANCE</p>
+        <i class="fas fa-dollar-sign"></i>
+          <p id="balance"></p>
+      </div>
+
+      <!-- relative to expense-entry div -->
+      <div class="expense-title-value">
+        <section>Expense Title</section>
+          <p id="item-title"></p>
+          <p id="expense-value"></p>
+        <!-- <section class="icons"> -->
+          <!-- <i class="far fa-edit"></i>
+          <i class="fas fa-trash"></i> -->
+        <!-- </section> -->
+      </div>
+    </wrapper>
+  </main-container>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+<!-- 
+  classes are usually for styling ids are for javascript 
+-->

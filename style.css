@@ -1,0 +1,60 @@
+:root {
+  --green: rgb(11, 172, 11);
+  --red: rgb(190, 8, 8);
+}
+
+* {
+  border-style: border-box;
+}
+
+.wrapper {
+  display: inline-grid;
+  grid-template-areas: 
+  "budget-entry budget expenses balance"
+  "expense-value icons";
+  margin: 10px 15px;
+  grid-template-rows: (3, 1fr);
+  position: relative;
+}
+/* .expense-title-value {
+  position: absolute;
+  bottom: 0;
+  top: 48%;
+  right: 20%;
+} */
+
+body {
+  background: rgb(241, 239, 239);
+}
+
+.budget-entry, .btn-budget {
+  border: 2px solid var(--green);
+  margin: 10px 15px;
+  width: 50%;
+}
+
+.expense-entry {
+  width: 50%;
+}
+
+.budget-entry > p, .expense-entry > p {
+  padding-left: 18px;
+}
+
+.expense-entry, .btn-expense {
+  border: 2px solid var(--red);
+  margin: 10px 15px;
+}
+
+.btn-budget {
+  color: var(--green);
+}
+.btn-expense {
+  color: var(--red);
+}
+
+.money-bill {
+  font: 15px;
+}
+
+/* https://css-tricks.com/snippets/css/complete-guide-grid/ */
